@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    OW\CommunicationBundle\:
+        resource: '../../../CommunicationBundle/*'
+        exclude: '../../../CommunicationBundle/{Builder,Event,Entity,Repository,Tests}'
