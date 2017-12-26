@@ -34,6 +34,14 @@ class HelloWorldEmailBuilder extends AbstractEmailBuilder
     }
 
     /**
+     * @return array
+     */
+    protected function getAttachments(): array
+    {
+        return [];
+    }
+
+    /**
      * Sets options to validate and merge them with default values.
      *
      * <code>
@@ -46,9 +54,9 @@ class HelloWorldEmailBuilder extends AbstractEmailBuilder
      */
     protected function configureParameters()
     {
-       $this->resolver
-           ->setRequired([
-               'name'
-           ]);
+        $this->resolver
+            ->setRequired([
+                'name'
+            ]);
     }
 }

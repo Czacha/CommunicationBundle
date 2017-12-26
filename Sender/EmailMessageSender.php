@@ -42,6 +42,9 @@ class EmailMessageSender extends MessageSender
             $message->getBody(),
             'text/html'
         );
+        foreach ($message->getAttachments() as $attachment) {
+            $email->attach(\Swift_Attachment::fromPath($attachment));
+        }
 
         $this->getMailer()->send($email);
     }

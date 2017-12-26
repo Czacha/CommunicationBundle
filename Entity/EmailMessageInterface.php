@@ -11,4 +11,7 @@ interface EmailMessageInterface
 {
     public function getSubject(): string;
     public function setSubject(string $subject): void;
+
+    public function getAttachments(): ?array;
+    public function setAttachments(?array $attachments): void;
 }

@@ -23,6 +23,11 @@ abstract class AbstractEmailBuilder extends AbstractMessageBuilder
     abstract protected function getTemplate(): string;
 
     /**
+     * @return array
+     */
+    abstract protected function getAttachments(): array;
+
+    /**
      * @return MessageInterface
      *
      * @throws \Twig_Error_Loader
@@ -37,6 +42,7 @@ abstract class AbstractEmailBuilder extends AbstractMessageBuilder
         $email->setBody(
             $this->getTwig()->render($this->getTemplate(), $this->parameters)
         );
+        $email->setAttachments($this->getAttachments());
 
         return $email;
     }
