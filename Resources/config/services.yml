@@ -5,5 +5,5 @@ services:
         public: true
 
     OW\CommunicationBundle\:
-        resource: '../../../CommunicationBundle/*'
-        exclude: '../../../CommunicationBundle/{Builder,Event,Entity,Repository,Tests}'
+        resource: '../../../communication-bundle/*'
+        exclude: '../../../communication-bundle/{Builder,Event,Entity,Repository,Tests}'
